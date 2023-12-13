@@ -28,12 +28,15 @@
                 //4. Get the response
                 let data = xhr.responseText.split("\n")
                 let country = data[1]
+                let shcountry = data[2]
                 let city = data[5]
+                let shcity = data[3]
+
 
                 let resDiv = document.getElementById('result')
                 resDiv.innerHTML = `
                     Found it in: <br/>
-                    ${country} ${city}
+                    ${country} ${shcountry} ${city} ${shcity}
                 `
 
                 console.log(xhr.responseText)
