@@ -1,0 +1,11 @@
+.live-search input{
+outline:none;
+}
+
+.live-search .form-control:focus{
+   border-color:var(--bs-gray-700);
+    box-shadow:none;
+}
+.live-search .search-results{
+    width: 100%;
+}

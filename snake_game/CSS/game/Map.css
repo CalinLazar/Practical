@@ -1,0 +1,14 @@
+#map{
+    border: 5px solid #555;
+    color: white;
+    position: relative;
+}
+
+#map > div{
+    width: 62px;
+    height: 62px;
+    border: 1px solid #777;
+    float: left;
+    background-image: repeating-linear-gradient(90deg, black, white 50%, black 100%), repeating-linear-gradient(0deg, black, white 50%, black 100%);
+     
+}

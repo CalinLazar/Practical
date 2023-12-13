@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container" 
+               data-dom-info="Some info"
+               data-dom-additional="Some info data-dom-additional">
+        <!-- inner structure -->
+    </div>
+    
+    <script>
+        let  obj  ={info: "ABC",
+    toString: function(){
+        return `{info: "ABC"}`
+    }
+}
+        //Global variable
+        let globalData = obj
+
+        //local variable
+        if(true){
+            let globalData = obj
+        }
+
+        //Dataset / data*attributes
+        let c = document.getElementById('container')
+        c.dataset.domInfo = obj
+    </script>
+</body>
+</html>

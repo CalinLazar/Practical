@@ -1,0 +1,59 @@
+<body>
+    
+    <style>
+        body{
+            background-color: #333;
+        }
+        #subscribe{
+            border: 1px solid #666;
+            padding: 1em;
+        }
+    </style>
+
+<form action="" id="subscribe">
+    <input type="text">
+    <button>SUBSCRIBE</button>
+</form>
+
+<script>
+    //shortcut / DOM caching
+    const form = document.getElementById('subscribe')
+    const input = form.firstElementChild
+    const button = form.lastElementChild
+
+
+    // usability
+    button.disabled = true
+
+    //usability
+    const max_visible = 23
+    let start = 0
+    let ph_message = "enter your email here please in order to subscribe"
+
+    // setInterval(()=>{
+    //     input.placeholder = ph_message.substring(start, start+max_visible)
+    //     start++
+    //     if(start > ph_message.lenght - max_visible){
+    //         start = 0
+    //     }
+    // },100)
+    
+    
+function whileTyping(){
+    if(input.value.lenght >= 3){
+        button.disabled = false
+    }else{
+        button.disabled = true
+    }
+}
+    //logic
+    function subscribe(){
+        alert()
+    }
+
+
+    //event binding
+    input.onkeyup = whileTyping
+    button.onclick = subscribe
+</script>
+</body>

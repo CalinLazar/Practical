@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        #top_,#bottom {
+            border: 3px solid white;
+            height: 40vh;
+        }
+
+        .message {
+            color: white;
+            padding: 1em;
+            border: 1px dotted #666;
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top_"></div>
+    <div id="bottom"></div>
+
+
+    <script>
+        // simple message component
+        class Message {
+            //initialization logic
+            constructor(text) {
+                if(text != ""){
+                    this.text = text
+                }else{
+                    this.text = "Error!!! Text cannot be empty"
+                }
+                
+            }
+            render(pElement) {
+                pElement.innerHTML = `
+                <h2 class="message">${this.text}</h2>
+                `
+            }
+        }
+
+        //An advanced message component
+        class AdvancedMessage extends Message {
+            //override
+            constructor(text, icon, color) {
+                super()
+                this.text = text
+                this.icon = icon
+                this.color = color
+            }
+
+            //override
+            render(pElement) {
+                pElement.innerHTML = `
+                <h2 class="message" style="color:${this.color}">[${this.icon}] ${this.text}</h2>
+                `
+            }
+        }
+
+
+        //USING THE MESSAGE CLASS
+        let msg1 = new Message("Hello World")
+        let msg2 = new AdvancedMessage(" ", "","")
+        msg1.render(top_)
+        msg2.render(bottom)
+    </script>
+
+
+<!-- 
+    [message]
+        |
+        |
+        |
+        |
+
+
+ -->
+</body>
+
+</html>
