@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa interactive gallery</title>
+    <link rel="stylesheet" href="vendor/Glider.js-master/glider.css">
+</head>
+
+<body>
+
+    <button onclick="loadMarsRoverPhotosData()">
+        load 
+    </button>
+
+    <input type="text" placeholder="yy-mm-dd" id="marsDate" onchange="updateURL()">
+
+    <div id="gallery">
+        <div class="glider-contain">
+            <div class="glider">
+
+            </div>
+
+            <button aria-label="Previous" class="glider-prev">«</button>
+            <button aria-label="Next" class="glider-next">»</button>
+            <div role="tablist" class="dots"></div>
+        </div>
+    </div>
+
+    <script src="vendor/Glider.js-master/glider.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
