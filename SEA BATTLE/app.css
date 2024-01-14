@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    /* height: 100%; */
+}
+
+.l-header {
+    background: #222;
+    height: 20vh;
+}
+
+.l-content {
+    background: #333;
+    height: 60vh;
+}
+
+.l-footer {
+    background: #444;
+    height: 20vh;
+}
+
+.sea {
+
+    /* custom properties */
+    --wave-color: darkblue;
+    background: linear-gradient(var(--wave-color), #333 50%);
+}
+
+
+
+.sea .wave-bottom {
+    
+    height: 100px;
+
+    background-image:
+        radial-gradient(transparent 44%, var(--wave-color) 45%),
+        linear-gradient(var(--wave-color), var(--wave-color));
+    background-position:
+        0 -35px,
+        0 35px;
+    background-size: 100px 75px;
+    background-repeat: repeat-x;
+}
+
+
+.sea .wave {
+position: absolute;
+width: 100%;
+bottom: 0;
+}
+
+.sea .wave::before {
+    content: "";
+    display: block;
+    /* border: 1px solid green; */
+
+    height: 100px;
+
+    background-image: radial-gradient(var(--wave-color) 49%, transparent 50%);
+    background-position: 50px 40px;
+    background-size: 100px 300px;
+    background-repeat: repeat-x;
+
+    transform: translateY(0px);
+}
+
+.sea .wave::after {
+    content: "";
+    display: block;
+    /* border: 1px solid green; */
+
+    height: 100px;
+
+    background-image: radial-gradient(transparent 44%, var(--wave-color) 45%),
+        linear-gradient(var(--wave-color), var(--wave-color));
+    background-position:
+        0 -35px,
+        0 35px;
+    background-size: 100px 75px;
+    background-repeat: repeat-x;
+
+
+}
+
+
+/* center var */
+
+.center {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+/* torpedo */
+
+
+
+.sea .torpedo {
+
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+}
+
+.sea .torpedo .head {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+
+
+    background-color: red;
+    border-radius: 100%;
+}
+
+.sea .torpedo .body {
+    position: absolute;
+
+
+
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 100%;
+}
+
+.sea .torpedo .tail {
+    position: absolute;
+
+
+
+    width: 30px;
+    height: 30px;
+    background-color: #999;
+    border-radius: 100%;
+}
+
+.sea .torpedo .tail-v {
+    position: absolute;
+
+
+
+    width: 10px;
+    height: 100px;
+    background-color: #777;
+
+}
+
+.sea .torpedo .tail-h {
+    position: absolute;
+
+
+
+    width: 100px;
+    height: 10px;
+    background-color: #777;
+
+}
+
+.sea .torpedo.reverse .head {
+    z-index: 3;
+
+    width: 40px;
+    height: 40px;
+}
+
+.sea .torpedo.reverse .body {
+    z-index: 2;
+
+    width: 55px;
+    height: 55px;
+}
+
+.sea .torpedo.reverse .tail {
+    z-index: 0;
+
+    width: 60px;
+    height: 60px;
+}
+
+.sea .torpedo.reverse .tail-h {
+    z-index: 1;
+}
+
+.sea .torpedo.reverse .tail-v {
+    z-index: 1;
+}
+
+
+.scope {
+
+    --target-color: #4F48;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--target-color);
+    border-radius: 100%;
+    color: var(--target-color);
+    font-size: 40px;
+    position: relative;
+}
+
+.scope .mid {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    text-align: center;
+    line-height: 200px;
+}
+
+.scope .h {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+
+    line-height: 190px;
+    letter-spacing: 174px;
+}
+
+.scope .v {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+
+    line-height: 210px;
+    letter-spacing: 174px;
+    writing-mode: vertical-lr;
+}
+
+.explosion {
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid #333;
+
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+}
+
+.fire-bottom-sm{
+
+    grid-column-start: 2;
+    grid-row-start: 3;
+
+    background-image: radial-gradient(rgba(236, 239, 176, 0.921), transparent 60%);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: fire-sm .5s linear;
+    animation-fill-mode: forwards;
+    background-position-x: center;
+}
+
+.fire-bottom-md{
+    
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    background-position: 0px 75px;
+    background-repeat:no-repeat ;
+    background-image: radial-gradient(rgba(218, 125, 33, 0.855), transparent 70%);
+
+    animation: fire-md 2s linear;
+    animation-fill-mode: forwards;
+    background-position-x: center;
+    opacity: 0;
+}
+
+
+
+@keyframes fire-sm {
+    0%{ background-image: radial-gradient(rgba(236, 239, 176, 0), transparent 60%);
+         opacity: 0;
+         background-size: 0 0;
+         background-position-y:100px ;
+        
+        }
+
+    10%{
+        background-image: radial-gradient(rgba(236, 239, 176, 0), transparent 60%);
+         opacity: 1;
+         background-size: 100% 100%;
+         background-position-y:0px ;
+        }
+
+    100%{ background-image: radial-gradient(rgba(236, 239, 176, 0.921), transparent 60%);
+         opacity: 0;
+         background-size: 0 0;
+         background-position-y:20px ;
+        
+        }
+}
+
+@keyframes fire-md {
+    0%{
+        background-position-y:200px ;
+        background-size: 0 0;
+        opacity: 0;
+    }
+
+    15%{
+        background-position-y:0px ;
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+
+    100%{
+        background-position-y: 250px ;
+        background-size: 150% 20%;
+        opacity: 0;
+    }
+}
+
+.radar, .sweep { position: absolute; }
+.radar {
+  overflow: hidden; 
+  top: 50%; left: 50%;
+  margin: -117px;
+  width: 248px; height: 248px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.5),
+    inset 0 0 0 1px hsla(0, 0%, 100%, 0.15);
+  background: 
+    repeating-radial-gradient(transparent, transparent 23px, #287a33 25px, #287a33 27px), 
+    linear-gradient(transparent 49.75%, #0e4c42 49.75%, #0e4c42 50.25%, transparent 50.25%) 50% no-repeat,
+    linear-gradient(90deg, transparent 49.75%, #0e4c42 49.75%, #0e4c42 50.25%, transparent 50.25%) 50% no-repeat,
+    linear-gradient(#333, #111);
+  background-size: 100%, 218px 218px, 218px 218px, 100%;
+}
+.sweep {
+  box-sizing: border-box;
+  top: 16px; left: 16px;
+  border-right: solid 1px hsla(145, 50%, 40%, .3);
+  width: 108px; height: 108px;
+  border-radius: 100% 0 0 0;
+  transform-origin: 100% 100%;
+  background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, hsla(145, 50%, 40%, 1));
+  animation: sweep 5s infinite linear;
+}
+@keyframes sweep { to { transform: rotate(360deg); } }
+
+
+
+.sea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    perspective: 500px;
+    perspective-origin:center top;
+}
+
+.sea .layer{
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.sea .layer:nth-child(2){
+z-index: 8;
+transform: translateZ(-100px);
+}
+
+
+
+.ship{
+    background-image: url(boat.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
