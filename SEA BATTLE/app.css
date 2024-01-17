@@ -100,11 +100,12 @@ bottom: 0;
 
 .sea .torpedo {
 
-    position: relative;
+    position: absolute;
 
     width: 200px;
     height: 200px;
-    border: 1px solid green;
+    transform: scale(.5);
+    bottom: 15px;
 }
 
 .sea .torpedo .head {

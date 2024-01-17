@@ -7,6 +7,8 @@
     <title>Sea Battle</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="layers.css">
+    <link rel="stylesheet" href="ship.css">
+    <link rel="stylesheet" href="rocket.css">
 </head>
 
 <body>
@@ -16,9 +18,12 @@
 
     <section class="l-content">
 
-        <div class="sea">
+        
 
-
+            <div class="sea" 
+            onmousemove="moveScope(event)">
+           <div class="wave"></div>
+       
 
            
 
@@ -53,11 +58,11 @@
             </div> -->
 
 
-        </div>
+       
 
     </section>
 
-    <footer class="l-footer">FOOTER</footer>
+    <footer class="l-footer">Score: <span id="score"></span></footer>
 
     <script src="app.js"></script>
 </body>

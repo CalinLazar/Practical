@@ -11,7 +11,7 @@
   transform: translateZ(1px);
   filter: brightness(100%) blur(0px);
   animation: wave 10s infinite;
-  animation-delay: 1.7877709263s;
+  animation-delay: 2.5624748775s;
 }
 
 .sea .layer:nth-child(1) {
@@ -19,7 +19,7 @@
   transform: translateZ(-49px);
   filter: brightness(94%) blur(0.2px);
   animation: wave 11s infinite;
-  animation-delay: 9.0598166097s;
+  animation-delay: 0.8820867797s;
 }
 
 .sea .layer:nth-child(2) {
@@ -27,7 +27,7 @@
   transform: translateZ(-99px);
   filter: brightness(88%) blur(0.4px);
   animation: wave 12s infinite;
-  animation-delay: 6.0759216731s;
+  animation-delay: 3.3439339584s;
 }
 
 .sea .layer:nth-child(3) {
@@ -35,7 +35,7 @@
   transform: translateZ(-149px);
   filter: brightness(82%) blur(0.6px);
   animation: wave 13s infinite;
-  animation-delay: 2.8551628839s;
+  animation-delay: 5.3539586623s;
 }
 
 .sea .layer:nth-child(4) {
@@ -43,7 +43,7 @@
   transform: translateZ(-199px);
   filter: brightness(76%) blur(0.8px);
   animation: wave 14s infinite;
-  animation-delay: 2.7912158654s;
+  animation-delay: 0.9980167774s;
 }
 
 .sea .layer:nth-child(5) {
@@ -51,7 +51,7 @@
   transform: translateZ(-249px);
   filter: brightness(70%) blur(1px);
   animation: wave 15s infinite;
-  animation-delay: 6.1275146085s;
+  animation-delay: 7.1953711175s;
 }
 
 .sea .layer:nth-child(6) {
@@ -59,7 +59,7 @@
   transform: translateZ(-299px);
   filter: brightness(64%) blur(1.2px);
   animation: wave 16s infinite;
-  animation-delay: 2.6700511348s;
+  animation-delay: 5.9827863635s;
 }
 
 .sea .layer:nth-child(7) {
@@ -67,7 +67,7 @@
   transform: translateZ(-349px);
   filter: brightness(58%) blur(1.4px);
   animation: wave 17s infinite;
-  animation-delay: 3.0298821532s;
+  animation-delay: 5.8686341952s;
 }
 
 .sea .layer:nth-child(8) {
@@ -75,7 +75,7 @@
   transform: translateZ(-399px);
   filter: brightness(52%) blur(1.6px);
   animation: wave 18s infinite;
-  animation-delay: 8.3970107355s;
+  animation-delay: 2.4878401836s;
 }
 
 .sea .layer:nth-child(9) {
@@ -83,20 +83,20 @@
   transform: translateZ(-449px);
   filter: brightness(46%) blur(1.8px);
   animation: wave 19s infinite;
-  animation-delay: 1.9691485851s;
+  animation-delay: 8.1764914635s;
 }
 
 @keyframes wave {
   0% {
-    left: -50%;
+    left: -10%;
   }
   33% {
-    left: -45%;
+    left: -5%;
   }
   66% {
-    left: -55%;
+    left: -5%;
   }
   100% {
-    left: -50%;
+    left: -10%;
   }
 }/*# sourceMappingURL=layers.css.map */
